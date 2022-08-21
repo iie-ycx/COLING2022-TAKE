@@ -5,7 +5,6 @@ from evaluation.Eval_Rouge import *
 from evaluation.Eval_Bleu import *
 from evaluation.Eval_Meteor import *
 from evaluation.Eval_F1 import *
-from evaluation.Eval_Distinct import *
 from torch.utils.data.distributed import DistributedSampler
 from sklearn.metrics import accuracy_score
 from TAKE.Utils import *
