@@ -79,7 +79,7 @@ def train(args):
 
     # construct an optimizer object for gen net
     model_optimizer = optim.Adam(model.parameters(), args.Declr) # model.parameters() Returns an iterator over module parameters.This is typically passed to an optimizer.
-    model_scheduler = get_constant_schedule(model_optimizer)   #恒定学习率 
+    model_scheduler = get_constant_schedule(model_optimizer) 
     trainer = CumulativeTrainer('gen', args.name, model, gpt2tokenizer, detokenizer=None, local_rank=args.local_rank, accumulation_steps=args.accumulation_steps)
     model_optimizer.zero_grad()  # Clears the gradients of all optimized torch.Tensor s. 
 
@@ -91,7 +91,7 @@ def train(args):
         args.train_batch_size = 4
         args.accumulation_steps = 16
         trainer.train_epoch('train', gpt2_train_dataset, collate_fn_gpt2, args.train_batch_size, i, model_optimizer, model_scheduler)
-        trainer.serialize(i, model_scheduler, saved_model_path=gen_saved_model_path)   #serialize 连载
+        trainer.serialize(i, model_scheduler, saved_model_path=gen_saved_model_path) 
         del gpt2_train_dataset
 
 def inference(args):
@@ -193,13 +193,13 @@ def inference(args):
                     inference('gen', args.dataset, i)
 
                     r = open(gen_saved_model_path + "finished_inference.json", 'r', encoding='utf-8')
-                    finished_inference = json.load(r) #读出
+                    finished_inference = json.load(r) 
                     r.close()
 
                     finished_inference["time"].append(i)
 
                     w = open(gen_saved_model_path + "finished_inference.json", 'w', encoding='utf-8')
-                    json.dump(finished_inference, w) #写入
+                    json.dump(finished_inference, w) 
                     w.close()
                     print("finished epoch {} inference".format(i))
 
@@ -224,11 +224,11 @@ if __name__ == '__main__':
     parser.add_argument("--epoches", type=int, default=15)
     parser.add_argument("--dis_epoches", type=int, default=5)
     parser.add_argument("--gen_epoches", type=int, default=10)
-    parser.add_argument("--accumulation_steps", type=int, default=16)  # with BERT should increase
+    parser.add_argument("--accumulation_steps", type=int, default=16)  
     parser.add_argument("--lr", type=float, default=0.00004) 
     parser.add_argument("--Bertlr", type=float, default=0.00001)  
     parser.add_argument("--Declr", type=float, default=0.00003)  
-    parser.add_argument("--train_batch_size", type=int, default=2)  # bert 4; no bert 32; debug 2
+    parser.add_argument("--train_batch_size", type=int, default=2) 
     parser.add_argument("--inference_batch_size", type=int, default=16)
     parser.add_argument("--appoint_epoch", type=int, default=-1)
     parser.add_argument("--ks_best_epoch", type=str, default='12')
@@ -238,7 +238,7 @@ if __name__ == '__main__':
     parser.add_argument("--max_episode_length", type=int, default=5)
     parser.add_argument("--context_len", type=int, default=52)
     parser.add_argument("--knowledge_sentence_len", type=int, default=34)
-    parser.add_argument("--max_knowledge_pool_when_train", type=int, default=32)  #原本为32
+    parser.add_argument("--max_knowledge_pool_when_train", type=int, default=32) 
     parser.add_argument("--max_knowledge_pool_when_inference", type=int, default=128)
 
     parser.add_argument('--gpt2_truncate', type=int, default=256) # for gpt2
