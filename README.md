@@ -1,6 +1,7 @@
 # COLING2022-TAKE: Topic-shift Aware Knowledge sElection for Dialogue Generation
 This repository contains the code for COLING-2022 full paper:[TAKE: Topic-shift Aware Knowledge sElection for Dialogue Generation](http://baidu.com).
 
+![TAKE model pic](https://github.com/iie-ycx/COLING2022-TAKE/raw/main/fig/take-pic.png)
 
 Please contact Chenxu Yang (sduycx@163.com) if you have any question.
 ## Requirements
