@@ -81,7 +81,7 @@ def train(args):
         model.load_state_dict(fuse_dict["model"])
         print('Loading success, last_epoch is {}'.format(last_epoch))
     else:
-        init_params(model, "enc.")   #模型非预训练部分参数初始化
+        init_params(model, "enc.")
 
         last_epoch = -1
         with open(saved_model_path + "checkpoints.json", 'w', encoding='utf-8') as w:
@@ -134,7 +134,7 @@ def train(args):
             freeze_params(model, "teacher")
             unfreeze_params(model, "student")
         trainer.train_epoch('train', train_dataset, collate_fn, args.train_batch_size, i, model_optimizer, model_scheduler)
-        trainer.serialize(i, model_scheduler, saved_model_path=saved_model_path)   #serialize 连载
+        trainer.serialize(i, model_scheduler, saved_model_path=saved_model_path)
 
 
 
