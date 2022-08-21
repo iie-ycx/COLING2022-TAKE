@@ -140,7 +140,6 @@ class gpt2Dataset(Dataset):
 
                 #get knowledge
                 if self.mode == "train":
-                    
                     knowledge = self.passage[example['knowledge_pool'][0]]
                 else:
                     pred_indice = self.pred[id * 5 + id_in_episode]

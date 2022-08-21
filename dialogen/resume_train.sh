@@ -1,1 +1,0 @@
-python TAKE/Run.py --name TAKE_WoW --resume --dataset wizard_of_wikipedia --mode train 2>&1|tee logs/log1.txt

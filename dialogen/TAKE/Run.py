@@ -49,11 +49,9 @@ def train(args):
         torch.save(passage_gpt2, gpt2_data_path + 'passage_TAKE.pkl')
         torch.save(train_episodes, gpt2_data_path + 'train_TAKE.pkl')
 
-    with open(os.path.join('output/TAKE_WoW/' + '/ks_pred/', "8_train_ks_pred.json"), 'r', encoding='utf-8') as r:
-        tr_ks_pred = json.load(r)
 
     #gen dataset
-    gpt2_train_dataset = gpt2Dataset(args.mode, train_samples_gpt2, query_gpt2, passage_gpt2, tr_ks_pred, args.segment, args.max_episode_length,
+    gpt2_train_dataset = gpt2Dataset(args.mode, train_samples_gpt2, query_gpt2, passage_gpt2, None, args.segment, args.max_episode_length,
                                         args.knowledge_truncate, args.text_truncate, args.gpt2_truncate, args=args)
 
     gpt2tokenizer = gpt2_train_dataset.tokenizer
