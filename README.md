@@ -3,7 +3,7 @@ This repository contains the code for COLING-2022 full paper:[TAKE: Topic-shift 
 
 ![TAKE model pic](https://github.com/iie-ycx/COLING2022-TAKE/raw/main/fig/take-pic.png)
 
-Please contact Chenxu Yang (sduycx@163.com) if you have any question.
+Please contact Chenxu Yang (yangchenxu@iie.ac.cn) if you have any question.
 ## Requirements
 - transformers==4.15.0
 - python 3.9
@@ -12,7 +12,7 @@ Please contact Chenxu Yang (sduycx@163.com) if you have any question.
 We use the Wizard of Wikipedia datasets preprocessed by [Meng et al](https://dl.acm.org/doi/10.1145/3404835.3462824). You can download the datasets from [here](https://share.weiyun.com/rpmIidMZ). After downloading, please create folder ./datasets in the root directory and put the files in it.
 ## Running TAKE Codes
 ### Inference
-We provide pretrained checkpoints to save your time, and you can acquire them [here](https://share.weiyun.com/aFmsVVcb).
+We provide pretrained checkpoints to save your time, and you can acquire them [here](https://share.weiyun.com/zqoSPsF7).
 You need to download the corresponding checkpoints and put them in the folder ./knowSelect/output/TAKE_WoW/model/ (KS) or the folder ./dialogen/output/TAKE_WoW/model/ (DG).
 After that, you can run the infer_bash.sh in in the root directory to get the evaluation results. 
 ### Retraining

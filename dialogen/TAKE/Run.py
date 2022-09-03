@@ -156,9 +156,9 @@ def inference(args):
     gen_saved_model_path = os.path.join(args.base_output_path + args.name + "/", 'gen_model/')
     
     
-    with open(os.path.join(args.base_output_path + args.name + '/ks_pred/', 'test_seen_' + '12' + "_ks_pred.json"), 'r', encoding='utf-8') as r:
+    with open(os.path.join(args.base_output_path + args.name + '/ks_pred/', 'test_seen_' + '10' + "_ks_pred.json"), 'r', encoding='utf-8') as r:
         ts_seen_ks_pred = json.load(r)
-    with open(os.path.join(args.base_output_path + args.name + '/ks_pred/', 'test_unseen_' + '10' + "_ks_pred.json"), 'r', encoding='utf-8') as r:
+    with open(os.path.join(args.base_output_path + args.name + '/ks_pred/', 'test_unseen_' + '9' + "_ks_pred.json"), 'r', encoding='utf-8') as r:
         ts_unseen_ks_pred = json.load(r)
 
     
