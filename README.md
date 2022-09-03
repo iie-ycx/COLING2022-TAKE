@@ -10,9 +10,13 @@ Please contact Chenxu Yang (yangchenxu@iie.ac.cn) if you have any question.
 - pytorch 1.10.1
 ## Datasets
 We use the Wizard of Wikipedia datasets preprocessed by [Meng et al](https://dl.acm.org/doi/10.1145/3404835.3462824). You can download the datasets from [here](https://share.weiyun.com/rpmIidMZ). After downloading, please put the files in the following 3 dirs:
+
 ./knowSelect/datasets/wizard_of_wikipedia/
+
 ./dialogen/datasets/wizard_of_wikipedia/
+
 ./dialogen/datasets/wow_gpt2/
+
 ## Running TAKE Codes
 ### Inference
 We provide pretrained checkpoints to save your time, and you can acquire them [here](https://share.weiyun.com/zqoSPsF7).
