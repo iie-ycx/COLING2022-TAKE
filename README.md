@@ -26,4 +26,4 @@ After that, you can run the infer_bash.sh in in the root directory to get the ev
 Of course, you can also retrain and evaluate TAKE by running the train_bash.sh in the root directory.
 ## Citation
 Please cite our paper if you use use source code of TAKE in your work:
-> not ready
+> Chenxu Yang, Zheng Lin, Jiangnan Li, Fandong Meng, Weiping Wang, Lanrui Wang, and Jie Zhou. 2022. TAKE: Topic-shift Aware Knowledge sElection for Dialogue Generation. In Proceedings of the 29th International Conference on Computational Linguistics, pages 253–265, Gyeongju, Republic of Korea. International Committee on Computational Linguistics.

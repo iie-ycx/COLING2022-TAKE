@@ -83,7 +83,7 @@ def train(args):
 
     #train gen net
     for i in range(last_epoch+1, args.gen_epoches): 
-        gpt2_train_dataset = gpt2Dataset(args.mode, train_samples_gpt2, query_gpt2, passage_gpt2, tr_ks_pred, args.segment, args.max_episode_length,
+        gpt2_train_dataset = gpt2Dataset(args.mode, train_samples_gpt2, query_gpt2, passage_gpt2, None, args.segment, args.max_episode_length,
                                         args.knowledge_truncate, args.text_truncate, args.gpt2_truncate, i, args=args)
 
         args.train_batch_size = 4
